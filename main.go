@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 
-	// "go_bookshelf/database"
 	"go_bookshelf/handler"
 
 	"github.com/gorilla/mux"
