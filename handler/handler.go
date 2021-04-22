@@ -60,15 +60,11 @@ func GetAllBooks(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Logic that will make sure we will not append book that have unmatched code
-		if reading == "1" && !book.Reading {
-			continue
-		} else if reading == "0" && book.Reading {
+		if (reading == "1" && !book.Reading) || (reading == "0" && book.Reading) {
 			continue
 		}
 
-		if finished == "1" && !book.Finished {
-			continue
-		} else if finished == "0" && book.Finished {
+		if (finished == "1" && !book.Finished) || (finished == "0" && book.Finished) {
 			continue
 		}
 
